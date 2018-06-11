@@ -1,4 +1,16 @@
 function insertionSort(arr) {
-  // your code here!
-  // arr is an array of unsorted integers (i.e. [3, 5, 1])
+  arr.forEach((number, index) => {
+    if (index === 0){
+      return
+    }else if (number < arr[index-1]){
+      let a = arr[index];
+      let b = arr[index-1];
+      arr[index] = b;
+      arr[index-1] = a;
+      return insertionSort(arr);
+    }else{
+      return
+    }
+  });
+  return
 }
